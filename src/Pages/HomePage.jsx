@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import RecipeCard from "../components/RecipeCard";
 import HeroCarousel from "../components/HeroCarousel";
 
-const API_KEY = "6ae99f60247949c2ae7bbdde39dd193f";
+const API_KEY = "f9a52510ad284b1788663e78edf004a0";
 
 export default function HomePage() {
   const [recipes, setRecipes] = useState([]);
