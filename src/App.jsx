@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react'
 import './App.css'
 
@@ -9,6 +10,10 @@ function App() {
 
     </>
   )
-}
+=======
+import HomePage from "./Pages/HomePage";
 
-export default App
+export default function App() {
+  return <HomePage />;
+>>>>>>> Initial Commit
+}
