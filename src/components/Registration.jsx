@@ -10,35 +10,33 @@ function Registration() {
     const auth = getAuth(app);
 
     const HandleSignup = async (e) => {
-        try{
-            await createUserWithEmailAndPassword(auth, email, password);
-            console.log("singUp Done");
-        }
-        catch(error){
-            console.log(error);
-        }
+    try {
+        await createUserWithEmailAndPassword(auth, email, password);
+        window.alert("Successfully signed up!"); // Popup message
+    } catch (error) {
+        window.alert(`Error: ${error.message}`); // Error popup
     }
+};
 
-    const HandleLogin = async (e) => {
-        e.preventDefault();
-        try{
-            await signInWithEmailAndPassword(auth, email, password);
-            console.log("Logged In");
-        }
-        catch(error){
-            console.log(error.code);
-        }
+const HandleLogin = async (e) => {
+    e.preventDefault();
+    try {
+        await signInWithEmailAndPassword(auth, email, password);
+        window.alert("Successfully logged in!");
+    } catch (error) {
+        window.alert(`Error: ${error.code}`); // e.g., "auth/invalid-credential"
     }
+};
 
-    const handleGoogleSignIn = async () => {
-        const provider = new GoogleAuthProvider();
-        try {
-            await signInWithPopup(auth, provider);
-            console.log("Google sign-in successful");
-        } catch (error) {
-            console.log(error);
-        }
-    };
+const handleGoogleSignIn = async () => {
+    const provider = new GoogleAuthProvider();
+    try {
+        await signInWithPopup(auth, provider);
+        window.alert("Google sign-in successful!");
+    } catch (error) {
+        window.alert(`Error: ${error.message}`);
+    }
+};
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
