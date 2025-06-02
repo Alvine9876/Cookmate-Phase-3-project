@@ -9,8 +9,8 @@ uvicorn = "*"
 sqlalchemy = "*"
 psycopg2-binary = "*"
 python-dotenv = "*"
-pydantic = {extras = ["dotenv"], version = "*"}
 python-jose = "*"
+pydantic = {extras = ["dotenv"], version = "*"}
 passlib = {extras = ["bcrypt"], version = "*"}
 
 [dev-packages]
