@@ -10,7 +10,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 export default function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-black text-white flex flex-col">
+      <div className="min-h-screen bg-white text-black flex flex-col">
+
         <Navbar />
         <main className="flex-grow p-6">
           <Routes>
