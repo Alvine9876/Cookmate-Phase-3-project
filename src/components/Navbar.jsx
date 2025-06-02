@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -16,12 +17,17 @@ export default function Navbar() {
         />
 
         {/* Buttons */}
-        <button className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full">
-          Recipes
-        </button>
+        <Link to="/">
+          <button className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full">
+             Recipes
+          </button>
+        </Link>
+
+        <Link to="/saved">
         <button className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full">
           Saved
         </button>
+        </Link>
         <button className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full">
           Sign In
         </button>
